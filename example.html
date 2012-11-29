@@ -1,0 +1,44 @@
+<!doctype html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" charset="utf-8" />
+        <script src="jquery-1.8.0.js"></script>
+        <script src="jquery-automultiline.js"></script>
+    </head>
+    <body>
+        <h2>Naked input</h2>
+        <input type="text" class="naked" />
+        <script>
+            jQuery(function($){
+                $('input.naked')
+                    .val('test')
+                    .automultiline();
+            });
+        </script>
+        
+        <form method="get" action="">
+            <h2>Input inside a form</h2>
+            <input type="text" class="inside-form" />
+            <script>
+                jQuery(function($){
+                    $('input.inside-form')
+                        .val('test')
+                        .automultiline();
+                });
+            </script>
+        </form>
+        
+        <h2>Allow multiple lines and vertical resizing</h2>
+        <input type="text" class="multilines" />
+        <script>
+            jQuery(function($){
+                $('input.multilines')
+                    .val('test')
+                    .automultiline({
+                        allowNewline: true,
+                        resize: 'vertical'
+                    });
+            });
+        </script>
+    </body>
+</html>
